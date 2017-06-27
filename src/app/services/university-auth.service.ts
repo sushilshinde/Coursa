@@ -6,7 +6,7 @@ import 'rxjs/Rx';
 export class UniversityAuthService {
 
     constructor(private http : Http) {}
-    
+    //This is service
     signIn(user){
         console.log("AuthService.signIn");
         console.log(user);
