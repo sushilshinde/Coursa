@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./student-home.component.css']
 })
 export class StudentHomeComponent implements OnInit {
-
+sampleVairable;
   constructor() { }
 
   ngOnInit() {
