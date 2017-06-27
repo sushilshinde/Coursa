@@ -1,0 +1,37 @@
+
+  <div class="row">
+    <div class="page-header text-center">
+      <h4>Courses <small>(<a href="#" [routerLink]="['/courses']">All Courses</a>)</small></h4>
+    </div>
+  </div>
+
+  <div class="row ">
+    <div class="col-sm-4 col-lg-4 col-md-4" *ngFor="let tile of tiles">
+      <div class="thumbnail">
+        <div class="card-panel {{tile.color}} text-center" title="{{tile.text}}">
+          <a href="#" [routerLink]="['/course','34232']"><h5>{{tile.text | curtailText:20}}</h5></a>
+        </div>
+
+        <div class="caption">
+          <h5 class="pull-right">{{tile.price}}</h5>
+
+          <a style="margin-top:5px" href="#" class="waves-effect waves-effect red darken-1 btn" [routerLink]="['/app-student-auth','34232']">Enroll<i class="material-icons right">send</i></a>
+          <br><br>
+          <p title={{tile.synop}}>{{tile.synop | curtailText:90}}</p>
+          <br>
+        </div>
+        <div class="ratings">
+          <p class="pull-right">15 reviews</p>
+          <p>
+            <span class="glyphicon glyphicon-star"></span>
+            <span class="glyphicon glyphicon-star"></span>
+            <span class="glyphicon glyphicon-star"></span>
+            <span class="glyphicon glyphicon-star"></span>
+            <span class="glyphicon glyphicon-star"></span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+

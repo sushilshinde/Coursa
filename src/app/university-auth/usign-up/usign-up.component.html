@@ -1,0 +1,73 @@
+<div class="tab-pane fade active in" id="signup">
+<form class="form-horizontal" novalidate [formGroup]="rForm" (ngSubmit)="submitForm()">
+
+  <fieldset>
+    <!-- Sign Up Form -->
+    <!-- Text input-->
+
+    <!-- Password input-->
+    <div class="control-group">
+      <label class="control-label" for="universityName">University Name:</label>
+      <div class="controls">
+        <input id="universityName" name="universityName" formControlName="universityName"  class="form-control" type="text" class="input-large">
+      </div>
+    </div>
+    
+    
+    <!-- Text input-->
+    <div class="control-group">
+      <label class="control-label" for="country">Country:</label>
+      <div class="controls">
+        <input id="country" name="v" formControlName="country"  class="form-control" type="text" class="input-large">
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label class="control-label" for="alphaTwoCode">Alpha Two Code:</label>
+      <div class="controls">
+        <input id="alphaTwoCode" name="alphaTwoCode" formControlName="alphaTwoCode"  placeholder="TR" class="form-control" type="text" class="input-large">
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label class="control-label" for="domain">Domain:</label>
+      <div class="controls">
+        <input id="domain" name="domain" formControlName="domain"  class="form-control" placeholder="something.edu.tr" type="text" class="input-large">
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label class="control-label" for="webPage">WebPage:</label>
+      <div class="controls">
+        <input id="webPage" name="webPage" formControlName="webPage"  class="form-control" placeholder="http://www.something.edu.tr/" type="text" class="input-large">
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label class="control-label" for="userName">User Name:</label>
+      <div class="controls">
+        <input id="userName" name="userName" formControlName="userName"  class="form-control" type="text" placeholder="useremail@domain.com"  class="input-large">
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label class="control-label" for="password">Password:</label>
+      <div class="controls">
+        <input id="password" name="password" formControlName="password"  class="form-control" type="password" placeholder="************" class="input-large">
+      </div>
+    </div>
+
+
+    <!-- Multiple Radios (inline) -->
+    <br>
+
+    <!-- Button -->
+    <div class="control-group">
+      <label class="control-label" for="confirmsignup"></label>
+      <div class="controls">
+        <button id="confirmsignup" name="confirmsignup" class="btn btn-success" type="submit">Sign Up</button>
+      </div>
+    </div>
+  </fieldset>
+</form>
+</div>

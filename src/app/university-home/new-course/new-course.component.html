@@ -1,0 +1,80 @@
+<div class="row">
+  <span style="font-size:25px">Add New Course</span>
+  <hr>
+</div>
+<div class="row">
+  <div class="tab-pane fade active in" id="signin">
+    <form class="form-horizontal" novalidate  (ngSubmit)="submitForm($event)">
+      <fieldset>
+        <!-- Sign In Form -->
+        <!-- Text input-->
+        <div class="control-group">
+          <label class="control-label" for="courseTitle">Course Title:</label>
+          <div class="controls">
+            <input required="" id="courseTitle" name="courseTitle" [(ngModel)]="courseTitle" type="text" class="form-control" placeholder="Course Title"
+              class="input-medium">
+          </div>
+        </div>
+
+        <h6><b>Course Contents</b></h6>
+
+        <!-- <app-course-form (submit)="addContent()" [(formValues)]="formValues" ></app-course-form>-->
+        <!-- Content Form -->
+        <div class="col-sm-4 col-lg-4 col-md-4" style="padding-left:0px">
+          <!-- Password input-->
+          <div class="control-group">
+            <label class="control-label" for="chapterTitle">Title:</label>
+            <div class="controls">
+              <input id="chapterTitle" name="chapterTitle" [(ngModel)]="chapterTitle" [ngModelOptions]="{standalone: true}" class="form-control"
+                placeholder="Chapter Title" type="text" class="input-medium">
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-6 col-md-6">
+          <!-- Password input-->
+          <div class="control-group">
+            <label class="control-label" for="path">Path:</label>
+            <div class="controls">
+              <input id="path" name="path" class="form-control" [(ngModel)]="path" [ngModelOptions]="{standalone: true}" type="text" placeholder="https://www.youtube.com/watch?v=AFN67cRapmM"
+                class="input-medium">
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-2 col-lg-2 col-md-2">
+          <!-- Button -->
+          <div class="control-group">
+            <label class="control-label" for="signin"></label>
+            <div class="controls">
+              <button type="button" class="btn waves-effect waves-light red" (click)="addChapter()">Add</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- /Content Form -->
+
+        <!-- List -->
+        <div class="container-fluid">
+          <div class="row" *ngFor="let content of contents;let i=index">
+            <div class="col-sm-4 col-lg-4 col-md-4">
+              <span class="title">{{content.chapterTitle}}</span>
+            </div>
+
+            <div class="col-sm-6 col-lg-6 col-md-6 text-left">
+              {{content.path}}
+            </div>
+
+            <div class="col-sm-2 col-lg-2 col-md-2 text-left">
+              <button type="button" class="btn waves-effect waves-light red" (click)="deleteChapter()">Delete</button>
+            </div>
+          </div>
+        </div>
+        <!-- /List -->
+      <button type="submit" class="btn waves-effect waves-light red">Save Course</button>
+      </fieldset>
+
+      
+    </form>
+  </div>
+</div>

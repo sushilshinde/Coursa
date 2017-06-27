@@ -1,0 +1,11 @@
+.card .card-content {
+    padding: 10px;
+    border-radius: 0 0 2px 2px;
+}
+
+.card .card-action {
+    position: relative;
+    background-color: inherit;
+    border-top: 1px solid rgba(160,160,160,0.2);
+    padding: 11px 24px;
+}

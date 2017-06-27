@@ -1,0 +1,32 @@
+<div class="tab-pane fade active in" id="signin" >
+  <form class="form-horizontal" novalidate [formGroup]="rForm" (ngSubmit)="submitForm($event)">
+    <fieldset>
+      <!-- Sign In Form -->
+      <!-- Text input-->
+      <div class="control-group">
+        <label class="control-label" for="userName">User Name:</label>
+        <div class="controls">
+          <input required="" id="userName" name="userName" formControlName="userName" type="text" class="form-control" placeholder="User Name" class="input-medium" >
+        </div>
+      </div>
+
+      <!-- Password input-->
+      <div class="control-group">
+        <label class="control-label" for="passwopasswordrdinput">Password:</label>
+        <div class="controls">
+          <input required="" id="password" name="password"  formControlName="password"  class="form-control" type="password" placeholder="********" class="input-medium">
+        </div>
+      </div>
+
+
+
+      <!-- Button -->
+      <div class="control-group">
+        <label class="control-label" for="signin"></label>
+        <div class="controls">
+          <button id="signin" name="signin" class="btn btn-success"  type="submit">Sign In</button>
+        </div>
+      </div>
+    </fieldset>
+  </form>
+</div>

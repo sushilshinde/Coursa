@@ -1,0 +1,16 @@
+
+  <div class="row">
+    <ul class="nav nav-tabs">
+      <li class="active"><a href="#a" data-toggle="tab" >Sign In</a></li>
+      <li><a data-target="#b"  href="#b"  data-toggle="tab" >Sign Up</a></li>
+    </ul>
+    <div class="tab-content clearfix">
+      <div class="tab-pane active" id="a">
+          <app-sign-in (submit)="signIn($event)"></app-sign-in>
+      </div>
+      <div class="tab-pane" id="b">
+          <app-sign-up (submit)="signUp($event)"></app-sign-up>
+      </div>
+    </div>
+  </div>
+
