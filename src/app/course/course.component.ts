@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CourseComponent implements OnInit {
 
+  sampleVariable : string;
   id: number;
   constructor(private router: ActivatedRoute) {
     console.log("In Second comp");
