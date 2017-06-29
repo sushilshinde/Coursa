@@ -40,3 +40,7 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# Automation files - Sushil
+git-auto.bat
+git-bb-auto.bat

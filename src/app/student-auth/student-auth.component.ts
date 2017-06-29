@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { StudentAuthService } from '../services/student-auth.service';
+import { StudentAuthService } from './student-auth.service';
 
 @Component({
   selector: 'app-student-auth',

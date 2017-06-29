@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UniversityAuthService } from '../services/university-auth.service';
+import { UniversityAuthService } from './university-auth.service';
 
 @Component({
   selector: 'app-university-auth',
@@ -8,20 +8,24 @@ import { UniversityAuthService } from '../services/university-auth.service';
 })
 export class UniversityAuthComponent implements OnInit {
 
+
   constructor(private authService: UniversityAuthService) { }
 
   ngOnInit() {
   }
 
+
+
   signIn(formData) {
-    this.authService.signIn(formData).subscribe(
-      (res) => {
+    if (formData && formData.universityName || formData.userName) {
+      this.authService.signIn(formData).subscribe(
+        (res) => {
 
-      }, (err) => {
+        }, (err) => {
 
-      });
+        });
+    }
   }
-
   signUp(formData: any) {
     console.log("In UniversityAuthComponent");
     if (formData && formData.universityName || formData.userName) {

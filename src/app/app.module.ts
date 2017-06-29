@@ -28,9 +28,11 @@ import { CourseContentsComponent } from './university-home/new-course/course-con
 import { CourseFormComponent } from './university-home/new-course/course-form/course-form.component';
 import { UniversityAuthComponent } from './university-auth/university-auth.component';
 import { USignUpComponent } from './university-auth/usign-up/usign-up.component';
+import { StudentAuthService } from './student-auth/student-auth.service';
+import { UniversityAuthService } from './university-auth/university-auth.service';
+import { CourseService } from './content/courses/courses.service';
+import { UniversityService } from './content/universities/university.service';
 
-import {StudentAuthService} from './services/student-auth.service';
-import {UniversityAuthService} from './services/university-auth.service';
 
 @NgModule({
   declarations: [
@@ -71,7 +73,7 @@ import {UniversityAuthService} from './services/university-auth.service';
     AppRouting    
 
   ],
-  providers: [StudentAuthService,UniversityAuthService],
+  providers: [StudentAuthService,UniversityAuthService,CourseService,UniversityService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

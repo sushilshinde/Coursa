@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UniversityService } from './university.service';
 
 @Component({
   selector: 'app-universities',
@@ -15,9 +16,14 @@ tiles = [
   ];
  
 
-  constructor() { }
+  universities;
+
+  constructor(private universityService : UniversityService) { }
 
   ngOnInit() {
+     this.universityService.getAllUniversities().subscribe((res) => {
+       this.universities = res;
+     },() => {});
   }
 
 }
